@@ -9,8 +9,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bryonnicoson.shakeituptest.MainActivity">
 
-    <TextView
+    <Button
+        android:layout_marginBottom="10dp"
+        android:background="#0000ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text=" Y E L P ! "
+        android:textColor="#ffffff"
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_below="@id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_snippet"/>
+
+
+    <TextView
+        android:layout_toRightOf="@id/iv_snippet"
+        android:layout_below="@id/button"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="business name" />
+
+
+
 </RelativeLayout>

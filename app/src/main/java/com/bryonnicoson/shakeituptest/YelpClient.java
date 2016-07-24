@@ -4,8 +4,13 @@ import android.os.AsyncTask;
 
 import com.yelp.clientlib.connection.YelpAPI;
 import com.yelp.clientlib.connection.YelpAPIFactory;
+import com.yelp.clientlib.entities.SearchResponse;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
+
+import retrofit2.Call;
 
 /**
  * Created by bryon on 7/23/16.
@@ -23,6 +28,7 @@ import java.util.Map;
 public class YelpClient {
 
     private static YelpClient yelpInstance = null;
+    public SearchResponse searchResponse;
 
     // TODO: keys to be secured *!*!*!*!
     private static final String CONSUMER_KEY = "p_Sow-jWWfC12oPsFePuCw";
@@ -43,7 +49,29 @@ public class YelpClient {
     YelpAPIFactory yelpAPIFactory = new YelpAPIFactory(CONSUMER_KEY, CONSUMER_SECRET, TOKEN, TOKEN_SECRET);
     YelpAPI yelpAPI = yelpAPIFactory.createAPI();
 
-    public void fetch(Map<String, String> params) {
+    public SearchResponse fetch() {
 
+        Map<String, String> params = new HashMap<>();
+        params.put("term", "food");
+        params.put("limit", "10");
+
+        Call<SearchResponse> call = yelpAPI.search("Chicago", params);
+        try {
+            searchResponse = call.execute().body();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return searchResponse;
     }
+
+//    public SearchResponse fetch(String coordinates, Map<String, String> params) {
+//
+//        Call<SearchResponse> call = yelpAPI.search(coordinates, params);
+//        try {
+//            searchResponse = call.execute().body();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return searchResponse;
+//    }
 }
