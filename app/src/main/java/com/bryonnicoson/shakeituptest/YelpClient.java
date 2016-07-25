@@ -31,10 +31,10 @@ public class YelpClient {
     public SearchResponse searchResponse;
 
     // TODO: keys to be secured *!*!*!*!
-    private static final String CONSUMER_KEY = "p_Sow-jWWfC12oPsFePuCw";
-    private static final String CONSUMER_SECRET = "XNlEA5HdGSdctoZ98OxkuZ_Yn90";
-    private static final String TOKEN = "i6BBygoo65ahqBCI6ecGDsuQoQYHCuRB";
-    private static final String TOKEN_SECRET = "g8Xn0ylAYm4UoqdoHoH96reP8Qo";
+    private static final String CONSUMER_KEY = "";
+    private static final String CONSUMER_SECRET = "";
+    private static final String TOKEN = "";
+    private static final String TOKEN_SECRET = "";
 
     // private empty constructor and public singleton instance access
     private YelpClient() {}
