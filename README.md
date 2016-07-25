@@ -8,4 +8,5 @@ Breadcrumbs...
 3. [butterknife](https://github.com/JakeWharton/butterknife) & [introduction](https://jakewharton.github.io/butterknife/)
 4. [picasso](https://square.github.io/picasso/)
 5. [painless threading](https://android-developers.blogspot.de/2009/05/painless-threading.html)
+6. [picasso - image resizing, scaling, and fit()](https://futurestud.io/blog/picasso-image-resizing-scaling-and-fit)
 
